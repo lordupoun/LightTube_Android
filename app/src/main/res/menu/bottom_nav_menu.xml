@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/terminal"
+        android:icon="@drawable/ic_terminal"
+        android:title="Ovládání" />
+
+    <item
+        android:id="@+id/preset"
+        android:icon="@drawable/ic_settings"
+        android:title="Předvolby" />
+
+    <item
+        android:id="@+id/bluetooth"
+        android:icon="@drawable/ic_bluetooth"
+        android:title="Nastavení" />
+</menu>

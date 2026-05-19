@@ -1,0 +1,5 @@
+LightTube
+
+Aplikace LightTube umožňuje ovládání zařízení LightTube pomocí Bluetooth.
+
+Aplikace LightTube slouží k bezdrátovému ovládání vysílače projektu LightTube. Umožňuje spuštění předdefinovaných animací a barevných efektů. Pro správnou funkčnost je třeba vlastnit sadu LightTube.

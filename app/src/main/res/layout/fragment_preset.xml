@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Ovládání"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <CheckBox
+            android:id="@+id/check1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="1"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintTop_toBottomOf="@id/tv_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/check2" />
+
+        <CheckBox
+            android:id="@+id/check2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="2"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintTop_toTopOf="@id/check1"
+            app:layout_constraintBottom_toBottomOf="@id/check1"
+            app:layout_constraintStart_toEndOf="@id/check1"
+            app:layout_constraintEnd_toStartOf="@id/check3" />
+
+        <CheckBox
+            android:id="@+id/check3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="3"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintTop_toTopOf="@id/check1"
+            app:layout_constraintBottom_toBottomOf="@id/check1"
+            app:layout_constraintStart_toEndOf="@id/check2"
+            app:layout_constraintEnd_toStartOf="@id/check4" />
+
+        <CheckBox
+            android:id="@+id/check4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="4"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintTop_toTopOf="@id/check1"
+            app:layout_constraintBottom_toBottomOf="@id/check1"
+            app:layout_constraintStart_toEndOf="@id/check3"
+            app:layout_constraintEnd_toStartOf="@id/check5" />
+
+        <CheckBox
+            android:id="@+id/check5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="5"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintTop_toTopOf="@id/check1"
+            app:layout_constraintBottom_toBottomOf="@id/check1"
+            app:layout_constraintStart_toEndOf="@id/check4"
+            app:layout_constraintEnd_toStartOf="@id/check6" />
+
+        <CheckBox
+            android:id="@+id/check6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:checked="true"
+            android:text="6"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintTop_toTopOf="@id/check1"
+            app:layout_constraintBottom_toBottomOf="@id/check1"
+            app:layout_constraintStart_toEndOf="@id/check5"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_brightness"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Brightness:"
+            app:layout_constraintTop_toBottomOf="@id/check1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tv_tempo" />
+
+        <TextView
+            android:id="@+id/tv_tempo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Tempo:"
+            app:layout_constraintStart_toEndOf="@id/tv_brightness"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_brightness"
+            app:layout_constraintBottom_toBottomOf="@id/tv_brightness" />
+
+        <EditText
+            android:id="@+id/brightness"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="255"
+            android:inputType="number"
+            android:maxLength="3"
+            app:layout_constraintTop_toBottomOf="@id/tv_brightness"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tempo" />
+
+        <EditText
+            android:id="@+id/tempo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="164"
+            android:inputType="number"
+            android:maxLength="3"
+            app:layout_constraintStart_toEndOf="@id/brightness"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/brightness"
+            app:layout_constraintBottom_toBottomOf="@id/brightness" />
+
+        <GridLayout
+            android:id="@+id/grid_barvy"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:columnCount="5"
+            app:layout_constraintTop_toBottomOf="@id/brightness"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <View android:id="@+id/btn1" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#000000" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" />
+            <View android:id="@+id/btn2" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#FF0000" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" />
+            <View android:id="@+id/btn3" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#FF6600" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" />
+            <View android:id="@+id/btn4" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#FF9900" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" />
+            <View android:id="@+id/btn5" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#FFCC00" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" />
+
+            <View android:id="@+id/btn6" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#FFFF00" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" />
+            <View android:id="@+id/btn7" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#CCFF00" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" />
+            <View android:id="@+id/btn8" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#66FF00" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" />
+            <View android:id="@+id/btn9" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#00FF00" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" />
+            <View android:id="@+id/btn10" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#00FF66" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" />
+
+            <View android:id="@+id/btn11" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#00FFCC" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" />
+            <View android:id="@+id/btn12" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#00FFFF" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" />
+            <View android:id="@+id/btn13" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#00CCFF" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" />
+            <View android:id="@+id/btn14" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#0066FF" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" />
+            <View android:id="@+id/btn15" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#0000FF" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" />
+
+            <View android:id="@+id/btn16" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#6600FF" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" />
+            <View android:id="@+id/btn17" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#CC00FF" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" />
+            <View android:id="@+id/btn18" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#FF00FF" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" />
+            <View android:id="@+id/btn19" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#FF0066" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" />
+            <View android:id="@+id/btn20" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#F0F0F0" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" />
+        </GridLayout>
+
+        <TextView
+            android:id="@+id/tv_efekty"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Efekty:"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/grid_barvy2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <GridLayout
+            android:id="@+id/grid_efekty"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:columnCount="4"
+            app:layout_constraintTop_toBottomOf="@id/tv_efekty"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <TextView android:id="@+id/btne1" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#E0E0E0" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" android:text="ZERO" android:gravity="center" android:textColor="#000000" android:textSize="12sp" />
+            <TextView android:id="@+id/btne2" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#E0E0E0" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" android:text="STATIC" android:gravity="center" android:textColor="#000000" android:textSize="12sp" />
+            <TextView android:id="@+id/btne3" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#E0E0E0" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" android:text="GRADIENT" android:gravity="center" android:textColor="#000000" android:textSize="12sp" />
+            <TextView android:id="@+id/btne4" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#E0E0E0" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" android:text="GRADIENT REV" android:gravity="center" android:textColor="#000000" android:textSize="12sp" />
+
+            <TextView android:id="@+id/btne5" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#E0E0E0" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" android:text="STROBE X2" android:gravity="center" android:textColor="#000000" android:textSize="12sp" />
+            <TextView android:id="@+id/btne6" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#E0E0E0" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" android:text="STROBE X4" android:gravity="center" android:textColor="#000000" android:textSize="12sp" />
+            <TextView android:id="@+id/btne7" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#E0E0E0" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" android:text="STROBE X8" android:gravity="center" android:textColor="#000000" android:textSize="12sp" />
+            <TextView android:id="@+id/btne8" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#E0E0E0" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" android:text="STROBE X16" android:gravity="center" android:textColor="#000000" android:textSize="12sp" />
+
+            <TextView android:id="@+id/btne9" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#E0E0E0" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" android:text="STRBE FADE X1" android:gravity="center" android:textColor="#000000" android:textSize="12sp" />
+            <TextView android:id="@+id/btne10" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#E0E0E0" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" android:text="STRBE FADE X2" android:gravity="center" android:textColor="#000000" android:textSize="12sp" />
+            <TextView android:id="@+id/btne11" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#E0E0E0" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" android:text="STRBE FADE X4" android:gravity="center" android:textColor="#000000" android:textSize="12sp" />
+            <TextView android:id="@+id/btne12" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#E0E0E0" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" android:text="STRBE FADE X8" android:gravity="center" android:textColor="#000000" android:textSize="12sp" />
+
+            <TextView android:id="@+id/btne13" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#E0E0E0" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" android:text="STRBE TWO x2" android:gravity="center" android:textColor="#000000" android:textSize="12sp" />
+            <TextView android:id="@+id/btne14" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#E0E0E0" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" android:text="STRBE TWO x4" android:gravity="center" android:textColor="#000000" android:textSize="12sp" />
+            <TextView android:id="@+id/btne15" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#E0E0E0" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" android:text="STRBE TWO x8" android:gravity="center" android:textColor="#000000" android:textSize="12sp" />
+            <TextView android:id="@+id/btne16" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#E0E0E0" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" android:text="STRBE TW x16" android:gravity="center" android:textColor="#000000" android:textSize="12sp" />
+
+            <TextView android:id="@+id/btne17" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#E0E0E0" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" android:text="SWITCH TWO x2" android:gravity="center" android:textColor="#000000" android:textSize="12sp" />
+            <TextView android:id="@+id/btne18" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#E0E0E0" clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground"         android:text="SWITCH TWO x4" android:gravity="center" android:textColor="#000000" android:textSize="12sp" />
+            <TextView android:id="@+id/btne19" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#E0E0E0" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" android:text="SWITCH TWO x8" android:gravity="center" android:textColor="#000000" android:textSize="12sp" />
+            <TextView android:id="@+id/btne20" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#E0E0E0" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" android:text="SWTCH TWO x16" android:gravity="center" android:textColor="#000000" android:textSize="12sp" />
+
+            <TextView android:id="@+id/btne21" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#E0E0E0" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" android:text="SECTORS" android:gravity="center" android:textColor="#000000" android:textSize="12sp" />
+            <TextView android:id="@+id/btne22" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#E0E0E0" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" android:text="SECTORS X" android:gravity="center" android:textColor="#000000" android:textSize="12sp" />
+            <TextView android:id="@+id/btne23" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#E0E0E0" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" android:text="SECTORS RND" android:gravity="center" android:textColor="#000000" android:textSize="12sp" />
+            <TextView android:id="@+id/btne24" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#E0E0E0" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" android:text="SCTRS RND X" android:gravity="center" android:textColor="#000000" android:textSize="12sp" />
+
+            <TextView android:id="@+id/btne25" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#E0E0E0" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" android:text="SECTRS TGR" android:gravity="center" android:textColor="#000000" android:textSize="12sp" />
+            <TextView android:id="@+id/btne26" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#E0E0E0" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" android:text="SECTRS TGR X" android:gravity="center" android:textColor="#000000" android:textSize="12sp" />
+            <TextView android:id="@+id/btne27" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#E0E0E0" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" android:text="MIDDLE" android:gravity="center" android:textColor="#000000" android:textSize="12sp" />
+            <TextView android:id="@+id/btne28" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#E0E0E0" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" android:text="MIDDLE X" android:gravity="center" android:textColor="#000000" android:textSize="12sp" />
+
+            <TextView android:id="@+id/btne29" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#E0E0E0" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" android:text="DOWN" android:gravity="center" android:textColor="#000000" android:textSize="12sp" />
+            <TextView android:id="@+id/btne30" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#E0E0E0" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" android:text="DOWN X" android:gravity="center" android:textColor="#000000" android:textSize="12sp" />
+            <TextView android:id="@+id/btne31" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#E0E0E0" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" android:text="UP/DOWN SEC" android:gravity="center" android:textColor="#000000" android:textSize="12sp" />
+            <TextView android:id="@+id/btne32" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#E0E0E0" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" android:text="UP/DOWN" android:gravity="center" android:textColor="#000000" android:textSize="12sp" />
+
+            <TextView android:id="@+id/btne33" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#E0E0E0" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" android:text="UP/DWN B SEC" android:gravity="center" android:textColor="#000000" android:textSize="12sp" />
+            <TextView android:id="@+id/btne34" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#E0E0E0" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" android:text="UP/DWN B" android:gravity="center" android:textColor="#000000" android:textSize="12sp" />
+            <TextView android:id="@+id/btne35" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#E0E0E0" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" android:text="FROM MID SEC" android:gravity="center" android:textColor="#000000" android:textSize="12sp" />
+            <TextView android:id="@+id/btne36" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#E0E0E0" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" android:text="FROM MID" android:gravity="center" android:textColor="#000000" android:textSize="12sp" />
+
+            <TextView android:id="@+id/btne37" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#E0E0E0" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" android:text="FROM MD CH" android:gravity="center" android:textColor="#000000" android:textSize="12sp" />
+            <TextView android:id="@+id/btne38" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#E0E0E0" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" android:text="FROM MD CH F" android:gravity="center" android:textColor="#000000" android:textSize="12sp" />
+            <TextView android:id="@+id/btne39" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#E0E0E0" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" android:text="FROM EDGE" android:gravity="center" android:textColor="#000000" android:textSize="12sp" />
+            <TextView android:id="@+id/btne40" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#E0E0E0" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" android:text="FROM EDGE F" android:gravity="center" android:textColor="#000000" android:textSize="12sp" />
+
+
+            <TextView android:id="@+id/btne41" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#E0E0E0" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" android:text="MID SPEC" android:gravity="center" android:textColor="#000000" android:textSize="12sp" />
+            <TextView android:id="@+id/btne42" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#E0E0E0" clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" android:text="MID SPEC F" android:gravity="center" android:textColor="#000000" android:textSize="12sp" />
+            <TextView android:id="@+id/btne43" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#E0E0E0" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" android:text="LEDS JUMPING" android:gravity="center" android:textColor="#000000" android:textSize="12sp" />
+            <TextView android:id="@+id/btne44" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#E0E0E0" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" android:text="DROPS" android:gravity="center" android:textColor="#000000" android:textSize="12sp" />
+
+            <TextView android:id="@+id/btne45" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#E0E0E0" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" android:text="GRADIENT" android:gravity="center" android:textColor="#000000" android:textSize="12sp" />
+            <TextView android:id="@+id/btne46" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#E0E0E0" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" android:text="GRADIENT F" android:gravity="center" android:textColor="#000000" android:textSize="12sp" />
+            <TextView android:id="@+id/btne47" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#E0E0E0" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" android:text="GRADIENT REV" android:gravity="center" android:textColor="#000000" android:textSize="12sp" />
+            <TextView android:id="@+id/btne48" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#E0E0E0" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" android:text="GRADIENT R F" android:gravity="center" android:textColor="#000000" android:textSize="12sp" />
+
+            <TextView android:id="@+id/btne49" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#E0E0E0" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" android:text="GLITCHY" android:gravity="center" android:textColor="#000000" android:textSize="12sp" />
+            <TextView android:id="@+id/btne50" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#E0E0E0" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" android:text="GLITCHY F" android:gravity="center" android:textColor="#000000" android:textSize="12sp" />
+            <TextView android:id="@+id/btne51" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#E0E0E0" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" android:text="LINE" android:gravity="center" android:textColor="#000000" android:textSize="12sp" />
+            <TextView android:id="@+id/btne52" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#E0E0E0" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" android:text="LINE F" android:gravity="center" android:textColor="#000000" android:textSize="12sp" />
+
+            <TextView android:id="@+id/btne53" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#E0E0E0" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" android:text="DOTS" android:gravity="center" android:textColor="#000000" android:textSize="12sp" />
+            <TextView android:id="@+id/btne54" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#E0E0E0" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" android:text="DOTS F" android:gravity="center" android:textColor="#000000" android:textSize="12sp" />
+            <TextView android:id="@+id/btne55" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#E0E0E0" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" android:text="DOT UP/DWN" android:gravity="center" android:textColor="#000000" android:textSize="12sp" />
+            <TextView android:id="@+id/btne56" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#E0E0E0" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" android:text="GRAVITY" android:gravity="center" android:textColor="#000000" android:textSize="12sp" />
+
+            <TextView android:id="@+id/btne57" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#E0E0E0" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" android:text="FALLING DOT" android:gravity="center" android:textColor="#000000" android:textSize="12sp" />
+            <TextView android:id="@+id/btne58" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#E0E0E0" clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" android:text="TUBES" android:gravity="center" android:textColor="#000000" android:textSize="12sp" />
+            <TextView android:id="@+id/btne59" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#E0E0E0" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" android:text="PINGPONG" android:gravity="center" android:textColor="#000000" android:textSize="12sp" />
+            <TextView android:id="@+id/btne60" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#E0E0E0" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" android:text="Efekt 20" android:gravity="center" android:textColor="#000000" android:textSize="12sp" />
+
+
+        </GridLayout>
+
+        <TextView
+            android:id="@+id/tv_secondary"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Sekundární barva:"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/grid_barvy"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <GridLayout
+            android:id="@+id/grid_barvy2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:columnCount="5"
+            app:layout_constraintTop_toBottomOf="@id/tv_secondary"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <View android:id="@+id/btn01" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#000000" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" />
+            <View android:id="@+id/btn02" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#FF0000" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" />
+            <View android:id="@+id/btn03" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#FF6600" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" />
+            <View android:id="@+id/btn04" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#FF9900" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" />
+            <View android:id="@+id/btn05" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#FFCC00" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" />
+
+            <View android:id="@+id/btn06" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#FFFF00" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" />
+            <View android:id="@+id/btn07" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#CCFF00" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" />
+            <View android:id="@+id/btn08" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#66FF00" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" />
+            <View android:id="@+id/btn09" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#00FF00" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" />
+            <View android:id="@+id/btn010" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#00FF66" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" />
+
+            <View android:id="@+id/btn011" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#00FFCC" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" />
+            <View android:id="@+id/btn012" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#00FFFF" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" />
+            <View android:id="@+id/btn013" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#00CCFF" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" />
+            <View android:id="@+id/btn014" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#0066FF" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" />
+            <View android:id="@+id/btn015" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#0000FF" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" />
+
+            <View android:id="@+id/btn016" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#6600FF" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" />
+            <View android:id="@+id/btn017" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#CC00FF" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" />
+            <View android:id="@+id/btn018" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#FF00FF" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" />
+            <View android:id="@+id/btn019" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#FF0066" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" />
+            <View android:id="@+id/btn020" android:layout_width="0dp" android:layout_height="50dp" android:layout_columnWeight="1" android:layout_marginHorizontal="4dp" android:layout_marginVertical="8dp" android:background="#F0F0F0" android:clickable="true" android:focusable="true" android:foreground="?android:attr/selectableItemBackground" />
+        </GridLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

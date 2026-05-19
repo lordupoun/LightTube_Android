@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Manuální nastavení (0-255)"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/check1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <CheckBox
+        android:id="@+id/check1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="1"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintTop_toBottomOf="@id/tv_title"
+        app:layout_constraintBottom_toTopOf="@id/tv_brightness"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/check2" />
+
+    <CheckBox
+        android:id="@+id/check2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="2"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintTop_toTopOf="@id/check1"
+        app:layout_constraintBottom_toBottomOf="@id/check1"
+        app:layout_constraintStart_toEndOf="@id/check1"
+        app:layout_constraintEnd_toStartOf="@+id/check3" />
+
+    <CheckBox
+        android:id="@+id/check3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="3"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintTop_toTopOf="@id/check1"
+        app:layout_constraintBottom_toBottomOf="@id/check1"
+        app:layout_constraintStart_toEndOf="@id/check2"
+        app:layout_constraintEnd_toStartOf="@+id/check4" />
+
+    <CheckBox
+        android:id="@+id/check4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="4"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintTop_toTopOf="@id/check1"
+        app:layout_constraintBottom_toBottomOf="@id/check1"
+        app:layout_constraintStart_toEndOf="@id/check3"
+        app:layout_constraintEnd_toStartOf="@+id/check5" />
+
+    <CheckBox
+        android:id="@+id/check5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="5"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintTop_toTopOf="@id/check1"
+        app:layout_constraintBottom_toBottomOf="@id/check1"
+        app:layout_constraintStart_toEndOf="@id/check4"
+        app:layout_constraintEnd_toStartOf="@+id/check6" />
+
+    <CheckBox
+        android:id="@+id/check6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:checked="true"
+        android:text="6"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintTop_toTopOf="@id/check1"
+        app:layout_constraintBottom_toBottomOf="@id/check1"
+        app:layout_constraintStart_toEndOf="@id/check5"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_brightness"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Tempo:"
+        app:layout_constraintTop_toBottomOf="@id/check1"
+        app:layout_constraintBottom_toTopOf="@id/brightness"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/brightness"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="164"
+        android:inputType="number"
+        android:maxLength="3"
+        app:layout_constraintTop_toBottomOf="@id/tv_brightness"
+        app:layout_constraintBottom_toTopOf="@id/tv_colour1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_colour1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Brightness:"
+        app:layout_constraintTop_toBottomOf="@id/brightness"
+        app:layout_constraintBottom_toTopOf="@id/colour1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/colour1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="255"
+        android:inputType="number"
+        android:maxLength="3"
+        app:layout_constraintTop_toBottomOf="@id/tv_colour1"
+        app:layout_constraintBottom_toTopOf="@id/tv_colour2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_colour2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Barva 1:"
+        app:layout_constraintTop_toBottomOf="@id/colour1"
+        app:layout_constraintBottom_toTopOf="@id/colour2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/colour2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="10"
+        android:inputType="number"
+        android:maxLength="3"
+        app:layout_constraintTop_toBottomOf="@id/tv_colour2"
+        app:layout_constraintBottom_toTopOf="@id/tv_effect1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_effect1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Barva 2:"
+        app:layout_constraintTop_toBottomOf="@id/colour2"
+        app:layout_constraintBottom_toTopOf="@id/effect1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/effect1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="30"
+        android:inputType="number"
+        android:maxLength="3"
+        app:layout_constraintTop_toBottomOf="@id/tv_effect1"
+        app:layout_constraintBottom_toTopOf="@id/tv_effect2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_effect2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Efekt 1:"
+        app:layout_constraintTop_toBottomOf="@id/effect1"
+        app:layout_constraintBottom_toTopOf="@id/effect2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/effect2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="2"
+        android:inputType="number"
+        android:maxLength="3"
+        app:layout_constraintTop_toBottomOf="@id/tv_effect2"
+        app:layout_constraintBottom_toTopOf="@id/tv_tempo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_tempo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Efekt 2:"
+        app:layout_constraintTop_toBottomOf="@id/effect2"
+        app:layout_constraintBottom_toTopOf="@id/tempo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/tempo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="160"
+        android:inputType="number"
+        android:maxLength="3"
+        app:layout_constraintTop_toBottomOf="@id/tv_tempo"
+        app:layout_constraintBottom_toTopOf="@id/btnSend"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btnSend"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#2196F3"
+        android:text="ODESLAT DATA"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/tempo"
+        app:layout_constraintBottom_toTopOf="@id/btnCancel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#B60101"
+        android:text="VYNULOVAT ZMĚNY"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/btnSend"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
